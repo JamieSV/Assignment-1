@@ -1,0 +1,104 @@
+
+/*ensures that the main uses container*/
+main {
+    width: 100%;
+    float: none;
+}
+
+/* for universal box sizing for clean padding/borders, doesn't shift */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*movie border*/
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/*movie border decoration*/
+.movie-card {
+    background-color: #1c1c1c;
+    border: 2px solid #3b1f5e;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*movie images*/
+.movie-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/*movie titles*/
+.movie-card h3 {
+    color: #d9c7ed;
+    font-size: 1.25rem;
+    margin: 12px 0 6px 0;
+}
+
+/*movie description*/
+.movie-card p {
+    color: #f2f2f2;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+}
+
+/*button decoration*/
+.movie-card .btn-click {
+    display: block;
+    background-color: #e63946;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 0;
+    border: 2px solid white;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/*movie-card animation*/
+.movie-card .btn-click:hover {
+    background-color: #b91f30;
+}
+
+/*description of text*/
+.movie-description {
+    color: #d9c7ed;
+    text-align: center;
+    font-size: 32px;
+    margin: 25px 0 10px 0;
+}
+
+/*description of text*/
+main p {
+    list-style: 1.6;
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* For tablets and phones placeholder*/
+@media screen and (max-width: 820px) {
+    .movies-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .movies-container {
+        grid-template-columns: 1fr;
+    }
+}
+

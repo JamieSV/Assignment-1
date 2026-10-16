@@ -1,0 +1,4 @@
+/* for universal box sizing for clean padding/borders, doesn't shift */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
